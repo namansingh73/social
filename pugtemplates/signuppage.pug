@@ -1,0 +1,43 @@
+head
+  title Signup
+  link(href='https://fonts.googleapis.com/css2?family=Livvic:wght@700&family=Noto+Sans+JP:wght@100&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='templates/signup.css')
+  link(rel='icon' href='/templates/logo.png' type='image/gif')  
+  meta(name='viewport' content='width=device-width,initial-scale=1')
+  
+.container
+  .box
+    #heading
+      | Quantumdeck
+    .info
+      | Sign up to see photos and videos from your friends.
+    #form
+      form.newuser
+        input#email(type='text' placeholder='Enter Email')
+        br
+        br
+        input#name(type='text' placeholder='Enter Full Name')
+        br
+        br
+        input#username(type='text' placeholder='Enter Username')
+        br
+        br
+        input#password(type='password' placeholder='Enter Password')
+        br
+        br
+        input#confirmPassword(type='password' placeholder='Confirm Password')
+        br
+        br
+        button Sign Up
+    br
+    #choice By signing up, you agree to our Terms , Data Policy and Cookies Policy .
+    br
+  .box2
+    span#login
+      | Already have an account? 
+      a(style='font-weight: bolder;' href='/login') Log In
+footer#footer
+  .foot
+    | &copy; 2020 Quantumdeck
+script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js')
+script(src='/js/signup.js')

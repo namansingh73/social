@@ -1,0 +1,84 @@
+<head>
+    <title>Your Account</title>
+    <link rel="stylesheet" href="mainpage.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Abel&amp;family=Anton&amp;family=Josefin+Sans:wght@200&amp;family=Lexend+Deca&amp;family=Livvic:wght@100&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="/templates/logo.png" type="image/gif" />
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="name">Quantumdeck</div>
+            <div class="search"><input class="searchTerm" type="text" placeholder="Whom are you looking for?" /><button class="searchButton" type="submit"><i class="fa fa-search"></i></button></div>
+            <div class="navi"><a href="/profile" title="Profile"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a><a href="/addpost" title="Add Post"><i class="fa fa-plus-circle" aria-hidden="true"></i></a><a class="logout" href="#" title="Logout"><i class="fa fa-sign-out" aria-hidden="true"></i></a></div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="posts">
+            <div class="user">Naman</div>
+            <div class="postImage">
+                <img class="img" src="default-profile-picture1.jpg" alt="this is image">
+            </div>
+            <div class="footContent">
+                <div class="postText">
+                    title<br>
+                    caption
+                </div>
+                <div class="likes">
+                    4 likes<br>
+                    <button class="likeButton" type="submit"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="commentForm"> 
+                <div class="input">
+                    <input class="addComment" type="text" placeholder="Add Comment" /><button class="submitComment" type="submit"><i class="fa fa-arrow-right"></i></button>
+                </div>
+                <div class="delete"><a href='#'><i class="fa fa-trash"></i></a></div>
+            </div>
+        </div>
+        <div class="posts">
+            <div class="head">
+                <div class="user"><span class="text">Naman</span></div>
+                <div class="delete"><a href='#'><i class="fa fa-trash"></i></a></div>
+            </div>  
+            <div class="postImage">
+                <img class="img" src="default-profile-picture1.jpg" alt="this is image">
+            </div>
+            <div class="footContent">
+                <div class="postText">
+                    title<br>
+                    caption
+                </div>
+                <div class="likes">
+                    4 likes    
+                </div>
+            </div>
+            <div class="commentForm"> 
+                <input class="addComment" type="text" placeholder="Add Comment" /><button class="submitComment" type="submit"><i class="fa fa-arrow-right"></i></button>
+            </div>
+        </div>
+        <div class="posts">
+            <div class="user">Naman</div>
+            <div class="postImage">
+                <img class="img" src="default-profile-picture1.jpg" alt="this is image">
+            </div>
+            <div class="footContent">
+                <div class="postText">
+                    title<br>
+                    caption
+                </div>
+                <div class="likes">
+                    4 likes    
+                </div>
+            </div>
+            <div class="commentForm"> 
+                <input class="addComment" type="text" placeholder="Add Comment" /><button class="submitComment" type="submit"><i class="fa fa-arrow-right"></i></button>
+                <span class="commentCount">4 <a class="showComment" href="#">Comments</a></span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="/js/logout.js"></script>

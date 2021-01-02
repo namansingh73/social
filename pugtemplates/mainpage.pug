@@ -1,0 +1,83 @@
+head
+  title Your Account
+  link(rel='stylesheet' href='/templates/mainpage.css')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN' crossorigin='anonymous')
+  link(href='https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Josefin+Sans:wght@200&family=Lexend+Deca&family=Livvic:wght@100&display=swap&family=Kanit:wght@500&display=swap' rel='stylesheet')
+  link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
+  link(rel='icon' href='/templates/logo.png' type='image/gif')
+  meta(name='viewport' content='width=device-width,initial-scale=1')
+
+header
+  .header
+    .name
+      .neon
+        span.text(data-text='thanks')
+          | Quantumdeck
+        span.gradient
+        span.spotlight
+    form.search
+      input.searchTerm(type='text' placeholder='search user')
+      button.searchButton(type='submit')
+        i.fa.fa-search
+    .navi
+      a(href='/profile' title='Profile')
+        i.fa.fa-user-circle-o(aria-hidden='true')
+      a(href='/addpost' title='Add Post')
+        i.fa.fa-plus-circle(aria-hidden='true')
+      a(href=`/friendRequest/${user._id}` title='Requests')
+        i.fa.fa-users(aria-hidden='true')
+      a(href=`/posts/myposts` title='My Posts')
+        i.fa.fa-address-card(aria-hidden='true')
+      a.logout(href='#' title='Logout')
+        i.fa.fa-sign-out(aria-hidden='true')
+.content
+  if posts.length>0
+    for post in posts
+      .posts
+        .head
+          .user(data-id=`${post._id}`) 
+            span.text 
+              a.postAuthor(href=`/profile/${post.postedBy._id}`) #{post.postedBy.name}
+            img.userImage(src=`${post.postedBy.profilePhoto}` alt="User Profile" width='30' height='30')
+          if mypost
+            .delete
+              a.removePost(href='#' data-id=`${post._id}`)
+                i.fa.fa-trash 
+        .postImage
+          img.img(src=`${post.photo}` alt='post')
+        .footContent
+          .postText
+            | #{post.title}
+            br
+            |                     #{post.caption}
+          .likes
+            | #{post.likedBy.length} Likes
+            br
+            form.likeForm(data-id=`${post._id}`)
+              if !post.currentUserLiked
+                button.likeButton(type='submit')
+                  i.fa.fa-heart
+              else
+                button.likeButton(type='submit')
+                  i.fa.fa-heart(class='liked')
+        form.commentForm(data-id=`${post._id}`)
+          input.addComment(type='text' placeholder='Add Comment')
+          button.submitComment(type='submit')
+            i.fa.fa-arrow-right
+          span.commentCount
+            | 
+            a.showComment(href=`/posts/showComments/${post._id}`) #{post.comment.length} Comments
+  else
+    .thisContent
+      .card
+        .empty
+          | No posts to show
+
+script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js')
+script(src='/js/logout.js')
+script(src='/js/addComment.js')
+script(src='/js/likeUnlike.js')
+script(src='/js/deletePost.js')
+script(src='/js/findUsers.js')
+

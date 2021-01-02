@@ -1,0 +1,41 @@
+head
+  link(rel='stylesheet' href='/templates/addPost.css')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN' crossorigin='anonymous')
+  link(href='https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Josefin+Sans:wght@200&family=Lexend+Deca&family=Livvic:wght@100&display=swap&family=Kanit:wght@500&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css')
+  link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
+  link(rel='icon' href='/templates/logo.png' type='image/gif') 
+  meta(name='viewport' content='width=device-width,initial-scale=1')
+header
+  .header
+    .name
+      | Quantumdeck
+    .navi
+      a(href='/profile' title='Profile')
+        i.fa.fa-user-circle-o(aria-hidden='true')
+      a(href='/mainpage' title='Home')
+        i.fa.fa-home(aria-hidden='true')
+      a.logout(href='#' title='Logout')
+        i.fa.fa-sign-out(aria-hidden='true')
+.row
+  form.input
+    .row
+      .input-field.col.s6
+        input#input_text(type='text' data-length='10')
+        label(for='input_text') Title
+    .row
+      .input-field.col.s12
+        textarea#textarea2.materialize-textarea(data-length='120')
+        label(for='textarea2') Caption
+    .imageinput
+      input.image(type='file' id='my_file' style='display: none;')
+      a.updatePhoto.waves-effect.waves-light.btn-small
+        | Image
+    .submit
+      button.btn.waves-effect.waves-light(class='#00B4CC' type='submit' name='action')
+        | Submit
+        i.material-icons.right send
+script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js')
+script(src='/js/logout.js')
+script(src='/js/addPost.js')

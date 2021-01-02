@@ -1,0 +1,72 @@
+html,body{
+	margin:0;
+	overflow: hidden;
+}
+@font-face {
+	font-family: myFirstFont;
+	src: url(Billabong.ttf);
+}
+.title{
+    font-family:myFirstFont;
+    font-size:50px;
+    text-align:center;
+}
+.background{
+	background:url(social.jpg);
+	background-size:cover;
+	height:95vh;
+	display:flex;
+	justify-content:center;
+}
+
+.content{
+	padding-top:200px;
+	text-align:center;
+	color:white;
+}
+.background h1,h3{
+	margin:15px;
+}
+.background .btn{
+	margin:30px;
+	background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+.background .btn:hover{
+	background:transparent;
+	border:1px solid white;
+	color:rgb(145, 138, 138);
+}
+h1{
+	font-family: 'Lexend Deca', sans-serif;
+	font-size:2.5em;
+}
+h3{
+	font-family: 'Abel', sans-serif;
+	font-size:2em;
+}
+button.btn{
+	border:none;
+	border-radius:2em;
+	padding:1em 3em;
+	font-size:1em;
+	font-family: 'Livvic';
+	cursor:pointer;
+	font-weight:bold;
+}
+@media screen and (max-width: 600px) {
+	.content{
+		padding-top:20%;
+		text-align:center;
+		color:white;
+	}
+	body{
+		overflow: hidden;
+	}
+	.background{
+		background:url(social.jpg);
+		background-size:cover;
+		height:95vh;
+		display:flex;
+		justify-content:center;
+	}
+}

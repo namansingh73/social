@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="addPost.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Josefin+Sans:wght@200&family=Lexend+Deca&family=Livvic:wght@100&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <div class="name">
+                    Quantumdeck
+                </div>
+                <div class="navi">
+                    <a href="#" title="Profile"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+                    <a href="#" title="Home"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    <a href="#" title="Logout"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </header>
+        <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="input_text" type="text" data-length="10">
+                  <label for="input_text">Title</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="textarea2" class="materialize-textarea" data-length="120"></textarea>
+                  <label for="textarea2">Caption</label>
+                </div>
+              </div>
+              <div class="imageinput">
+                <input type="file" id="fileInput" name="file" />
+              </div>
+              <div class="submit">
+                <button class="btn waves-effect waves-light #00B4CC" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                  </button>
+              </div>
+            </form>
+        </div>
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</html>

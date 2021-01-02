@@ -1,0 +1,425 @@
+body{
+    margin:0;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: white;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: grey;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+.header{
+    width:100%;
+    height:80px;
+    display:flex;
+    justify-content: space-between;
+    border-bottom:1px solid grey;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    font-weight: 100;
+}
+.header .name{
+    width:33%;
+    font-family: 'Kanit', sans-serif;
+    font-size:30px;
+    text-align:center;
+    margin-top:10px;
+}
+
+body{
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header .search {
+  width: 33%;
+  display: flex;
+  margin:20 0 0 0;
+  height:40%;
+}
+
+.searchTerm {
+  width: 50%;
+  /* border: 3px solid #00B4CC; */
+  border: 0.1px solid grey;
+  padding: 5px;
+  height: 20px;
+  border-radius: 2px;
+  outline: none;
+  color: black;
+  height:100%;
+  box-shadow: -1px 2px 14px -1px rgba(0,0,0,0.75);
+  border-radius: 5px 0 5px 5px;
+}
+
+/* .searchTerm:focus{
+  color: #00B4CC;
+} */
+
+.searchButton {
+  border-radius: 5px 5px 5px 0;
+  width: 30px;
+  height: 100%;
+  /* border: 1px solid #00B4CC;
+  background: #00B4CC; */
+  text-align: center;
+  color: black;
+  /* border-radius: 0 5px 5px 0; */
+  cursor: pointer;
+  border:none;
+  background: white;
+  font-size: 20px;
+  box-shadow: -1px 2px 14px -1px rgba(0,0,0,0.75);
+
+}
+.header .navi{
+    margin-top:20px;
+    width:25%;
+    display:flex;
+    font-size:25px;
+    justify-content: space-evenly;
+}
+.header .navi i{
+    transition: transform .5s; /* Animation */
+    color:black;
+}
+.header .navi i:hover{
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    color:grey;
+}
+
+.postImage{
+  width:90%;
+  margin:0 auto;
+}
+
+.content{
+  margin-top:100px;
+}
+
+.posts{
+  background: white;
+  margin:80px auto;
+  transition: transform .5s; /* Animation */
+  width:40%;
+  display: flex;
+  flex-direction: column;
+  font-family:'Livvic';
+  border:0.5px solid grey;
+  border-radius: 5px;
+  min-height: 100px;
+  box-shadow: 2px 2px 24px -1px rgba(0,0,0,0.75);
+}
+
+.posts:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.posts .img{
+  margin-top: 10px;
+  width:100%;
+  height:300px;
+}
+.posts .head .user{
+  text-align:center;
+  font-weight: 900;
+  font-size: 20px;
+  width:80%;
+  text-align: center;
+}
+.user{
+  margin:15px 0;
+  display:flex;
+  justify-content: space-evenly;
+}
+/* .user .text{
+  margin-left: 100px;
+} */
+
+.user img{
+  border-radius: 50%;
+}
+
+.head .delete{
+  margin:10px 0 0 40px;
+}
+.head .delete a{
+  text-decoration: none;
+  color:black;
+  font-size: 20px;
+}
+
+/* .fa-trash{
+  margin:10px 20px 0 0 ;
+} */
+
+.posts .head{
+  display: flex;
+}
+
+.posts .postText{
+  font-size: 20px;
+  margin:16px;
+  font-weight: 900;
+}
+
+.posts .commentForm{
+  margin:10px 35px;
+}
+
+.commentForm .addComment{
+  width: 50%;
+  border-bottom: 1px solid black;
+  border-right: none;
+  border-left:none;
+  border-top:none;
+  padding: 5px;
+  height: 20px;
+  outline: none;
+  color: #8dac9d;
+  height:100%;
+}
+
+.commentForm .submitComment{
+  width: 30px;
+  height: 32px;
+  /* border: 1px solid #00B4CC;
+  background: #00B4CC; */
+  text-align: center;
+  color: black;
+  background: white;
+  border:none;
+  cursor: pointer;
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+.posts .footContent{
+  display: flex;
+  justify-content: space-between;
+  margin:0 20px;
+}
+.footContent .likes{
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 900;
+  height:50px;
+  width:30%;
+}
+
+.footContent .likeButton{
+  margin-top: 10px;
+  background: white;
+  border:none;
+  font-size: 24px;
+  color:grey;
+}
+
+.commentCount{
+  font-weight: 800;
+  margin-left: 70px;
+  font-size: 16px;
+}
+.showComment,.postAuthor{
+  text-decoration: none;
+  color:black;
+  font-weight: 800;
+}
+.alert {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 9999;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 1.6rem 15rem;
+  -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+}
+.alert--success {
+  background-color: #00B4CC;
+}
+.alert--error {
+  background-color: pink;
+}
+
+.liked{
+  color:red;
+}
+
+.thisContent{
+  margin: 50px auto;
+  width:60%;
+  min-height:100px;
+}
+
+.thisContent .card{
+  background: white;
+  margin:30px;
+  border-radius: 10px;
+  height:100px;
+  border:0.1px solid grey;
+  display: flex;
+  font-family: 'Livvic';
+}
+
+.card .empty{
+  margin:auto;
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  .header{
+    width:100%;
+    height:10%;
+    display:flex;
+    justify-content: space-evenly;
+    border-bottom:1px solid grey;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    font-weight: 100;
+  }
+  body::-webkit-scrollbar {
+    width: 0px;       /* width of the entire scrollbar */
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: grey;    /* color of the scroll thumb */
+    border-radius: 0px;     /* roundness of the scroll thumb */
+  }
+  .header .name{
+    display: none;
+  }
+  .header .search {
+    width: 55%;
+    display: flex;
+    margin:20px 0 0 10px;
+    height:40%;
+  }
+  .posts{
+    background: white;
+    margin:80px auto;
+    transition: none;
+    transform: none;
+    width:80%;
+    display: flex;
+    flex-direction: column;
+    font-family:cursive;
+    border:0.5px solid grey;
+    border-radius: 5px;
+    min-height: 100px;
+    box-shadow: 2px 2px 24px -1px rgba(0,0,0,0.75);
+  }
+  .posts:hover {
+    transform: none; /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+  .posts .img{
+    margin-top: 0px;
+    width:100%;
+    height:200px;
+  }
+  .posts .postText{
+    font-size: 12px;
+    margin:16px;
+    font-weight: 900;
+  }
+  .posts .head .user{
+    text-align:center;
+    font-weight: 900;
+    font-size: 16px;
+    width:80%;
+    text-align: center;
+  }
+  .footContent .likes{
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 900;
+    height:50px;
+    width:30%;
+  }
+  .posts .commentForm{
+    margin:5px 20px;
+  }
+  .commentForm .addComment{
+    width: 30%;
+    border-bottom: 1px solid black;
+    border-right: none;
+    border-left:none;
+    border-top:none;
+    padding: 5px;
+    height: 20px;
+    outline: none;
+    color: #8dac9d;
+    height:100%;
+    font-size: 10px;
+  }
+  .commentForm .submitComment{
+    width: 30px;
+    height: 32px;
+    /* border: 1px solid #00B4CC;
+    background: #00B4CC; */
+    text-align: center;
+    color: black;
+    background: white;
+    border:none;
+    cursor: pointer;
+    font-size: 16px;
+    padding-bottom: 5px;
+  }
+  .commentCount{
+    font-weight: 800;
+    margin-left: 30px;
+    font-size: 16px;
+  }
+  .header .navi{
+    margin-top:20px;
+    width:60%;
+    display:flex;
+    font-size:25px;
+    justify-content: space-around;
+}
+.header .navi i{
+    transition: transform; /* Animation */
+    color:black;
+}
+.header .navi i:hover{
+    transform: none; /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.thisContent{
+  margin: 10px auto;
+  width:90%;
+  min-height:100px;
+}
+
+.thisContent .card{
+  background: white;
+  margin:0;
+  border-radius: 10px;
+  height:100px;
+  border:0.1px solid grey;
+  display: flex;
+  font-family:cursive;
+}
+
+.card .empty{
+  margin:auto;
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+}
+
+}
+
+

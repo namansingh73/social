@@ -1,0 +1,222 @@
+body{
+    margin:0;
+}
+.header{
+    width:100%;
+    height:80px;
+    display:flex;
+    justify-content: space-between;
+    border-bottom:1px solid grey;
+    background: white;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    font-weight: 100;
+}
+
+.header .name{
+  width:33%;
+  font-family: 'Kanit', sans-serif;
+  font-size:30px;
+  text-align:center;
+  margin-top:10px;
+}
+
+body{
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header .search {
+  width: 33%;
+  display: flex;
+  margin:20 0 0 0;
+  height:40%;
+}
+
+.searchTerm {
+  width: 50%;
+  /* border: 3px solid #00B4CC; */
+  border: 0.1px solid grey;
+  padding: 5px;
+  height: 20px;
+  border-radius: 2px;
+  outline: none;
+  color: black;
+  height:100%;
+  box-shadow: -1px 2px 14px -1px rgba(0,0,0,0.75);
+  border-radius: 5px 0 5px 5px;
+}
+
+/* .searchTerm:focus{
+  color: #00B4CC;
+} */
+
+.searchButton {
+  border-radius: 5px 5px 5px 0;
+  width: 30px;
+  height: 100%;
+  /* border: 1px solid #00B4CC;
+  background: #00B4CC; */
+  text-align: center;
+  color: black;
+  /* border-radius: 0 5px 5px 0; */
+  cursor: pointer;
+  border:none;
+  background: white;
+  font-size: 20px;
+  box-shadow: -1px 2px 14px -1px rgba(0,0,0,0.75);
+
+}
+.header .navi{
+    margin-top:20px;
+    width:15%;
+    display:flex;
+    font-size:25px;
+    justify-content: space-evenly;
+}
+.header .navi i{
+  transition: transform .5s; /* Animation */
+  color:black;
+}
+.header .navi i:hover{
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  color:grey;
+}
+.content{
+  margin: 50px auto;
+  width:40%;
+  min-height:100px;
+}
+
+.content .card{
+  background: white;
+  margin:30px;
+  border-radius: 10px;
+  height:100px;
+  border:0.1px solid grey;
+  display: flex;
+  font-family: 'Livvic';
+  justify-content: space-evenly;
+  box-shadow: -1px 2px 14px -1px rgba(0,0,0,0.75);
+  transition: transform .5s; /* Animation */
+
+}
+
+.content .card:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.card .image img{
+  margin:10px 0 10px 50px;
+  border-radius: 50%;
+}
+
+.card .rightContent{
+  margin-left:50px;
+  width:300px;
+}
+
+.rightContent .name{
+  font-size:24px;
+  font-weight: 800;
+  margin:30px 0;
+  width:250px;
+}
+
+.card .empty{
+  margin:auto;
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+}
+.rightContent a{
+  text-decoration: none;
+  color: black;
+  margin-top: 10px;
+}
+@media screen and (max-width: 600px) {
+  .header{
+    width:100%;
+    height:10%;
+    display:flex;
+    justify-content: space-evenly;
+    border-bottom:1px solid grey;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    font-weight: 100;
+  }
+  body::-webkit-scrollbar {
+    width: 0px;       /* width of the entire scrollbar */
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: grey;    /* color of the scroll thumb */
+    border-radius: 0px;     /* roundness of the scroll thumb */
+  }
+  .header .name{
+    display: none;
+  }
+  .header .search {
+    width: 55%;
+    display: flex;
+    margin:20px 0 0 10px;
+    height:40%;
+  }
+  .header .navi{
+    margin-top:20px;
+    width:60%;
+    display:flex;
+    font-size:25px;
+    justify-content: space-around;
+  }
+  .header .navi i{
+      transition: transform; /* Animation */
+      color:black;
+  }
+  .header .navi i:hover{
+      transform: none; /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+  .content{
+    margin: 50px auto;
+    width:90%;
+    min-height:100px;
+  }
+  
+  .content .card{
+    background: white;
+    margin:30px;
+    border-radius: 10px;
+    height:100px;
+    border:0.1px solid grey;
+    display: flex;
+    font-family:cursive;
+    justify-content: space-evenly;
+    box-shadow: -1px 2px 14px -1px rgba(0,0,0,0.75);
+    transition: transform; /* Animation */
+  }
+  
+  .content .card:hover {
+    transform: none; /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+  
+  .card .image img{
+    margin:10px;
+    border-radius: 50%;
+  }
+  
+  .card .rightContent{
+    margin-left:0;
+    width:40%;
+  }
+  
+  .rightContent .name{
+    font-size:16px;
+    font-weight: 800;
+    margin:30px 0;
+    width:100%;
+  }
+  
+  .card .empty{
+    margin:auto;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+  }
+}

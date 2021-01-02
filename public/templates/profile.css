@@ -1,0 +1,346 @@
+html,body{
+    margin:0;
+    /* overflow-x: hidden; */
+}
+.header{
+    width:100%;
+    height:80px;
+    display:flex;
+    justify-content: space-between;
+    border-bottom:1px solid grey;
+    background: white;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    font-weight: 100;
+}
+
+.header .name{
+  width:33%;
+  font-family: 'Kanit', sans-serif;
+  font-size:30px;
+  text-align:center;
+  margin-top:10px;
+}
+
+body{
+  background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+  background-blend-mode: screen;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header .search {
+  width: 33%;
+  display: flex;
+  margin:20 0 0 0;
+  height:40%;
+}
+
+.searchTerm {
+  width: 50%;
+  /* border: 3px solid #00B4CC; */
+  border: 0.1px solid grey;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 5px 5px;
+  outline: none;
+  color: black;
+  height:100%;
+  box-shadow: -1px 2px 14px -1px rgba(0,0,0,0.75);
+}
+
+/* .searchTerm:focus{
+  color: #00B4CC;
+} */
+
+.searchButton {
+  border-radius: 5px 5px 5px 0;
+  width: 30px;
+  height: 100%;
+  /* border: 1px solid #00B4CC;
+  background: #00B4CC; */
+  text-align: center;
+  color: black;
+  /* border-radius: 0 5px 5px 0; */
+  cursor: pointer;
+  border:none;
+  background: white;
+  font-size: 20px;
+  box-shadow: -1px 2px 14px -1px rgba(0,0,0,0.75);
+
+}
+.header .navi{
+    margin-top:20px;
+    width:20%;
+    display:flex;
+    font-size:25px;
+    justify-content: space-evenly;
+}
+.header .navi i{
+  transition: transform .5s; /* Animation */
+  color:black;
+}
+.header .navi i:hover{
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  color:grey;
+}
+.info{
+  margin-left:300px;
+  width:100%;
+  height:200px;
+  margin-top:30px;
+  display:flex;
+}
+.image img{
+  border-radius: 50%;
+}
+.info .name{
+  font-size: 30px;
+  font-weight: 900;
+  font-family: 'Livvic';
+  margin-top:50px;
+}
+.line{
+  width:100%;
+  border-top: 0.5px solid grey;
+}
+.info .postfriends{
+  font-size: 14px;
+  font-weight: 100;
+  width:250px;
+  margin:50px 100px 0 150px;
+  font-family: 'Open Sans', sans-serif;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.postfriends .generalInfo{
+  display: flex;
+  width:100%;
+  justify-content: space-around;
+}
+
+.profilePhoto{
+  height:200px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.updatePhoto{
+  margin-top:15px;
+  margin-left:25px;
+  width:100px;
+  height:30px;
+  border-radius:5px;
+  color:white;
+  font-weight:600;
+  background:#00308F;
+  border: none;
+}
+
+.postfriends .addFriend{
+  margin:0px 20px;
+}
+
+.addFriend  .add-btn{
+  color:white;
+  border:none;
+  background:#00308F ;
+  width:120px;
+  height:30px;
+  border-radius: 10px;
+}
+
+.addFriend .sent{
+  color:white;
+  border:none;
+  background:#007FFF ;
+  width:120px;
+  height:30px;
+  border-radius: 10px;
+}
+
+.addFriend .accepted{
+  color:white;
+  border:none;
+  background:#008E97 ;
+  width:120px;
+  height:30px;
+  border-radius: 10px;
+}
+
+
+.fa-user-plus,.fa-check{
+  margin:8px 12px 8px;
+}
+
+.gallery{
+  
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin:0 150px 0 150px;
+}
+.gallery .item{
+  width:30%;
+  margin:20px;
+  box-shadow: -1px 2px 14px -1px rgba(0,0,0,0.75);
+  transition: transform .5s; /* Animation */
+}
+.gallery .item:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.generalInfo a{
+  text-decoration: none;
+  color:black;
+}
+@media screen and (max-width: 600px) {
+  .header{
+    width:100%;
+    height:10%;
+    padding-left:1%;
+    display:flex;
+    justify-content: space-evenly;
+    border-bottom:1px solid grey;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    font-weight: 100;
+  }
+  body::-webkit-scrollbar {
+    width: 0px;       /* width of the entire scrollbar */
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: grey;    /* color of the scroll thumb */
+    border-radius: 0px;     /* roundness of the scroll thumb */
+  }
+  .header .name{
+    display: none;
+  }
+  .header .search {
+    width: 55%;
+    display: flex;
+    margin:20px 0 0 10px;
+    height:40%;
+  }
+  .header .navi{
+    margin-top:20px;
+    width:60%;
+    display:flex;
+    font-size:25px;
+    justify-content: space-around;
+  }
+  .header .navi i{
+      transition: transform; /* Animation */
+      color:black;
+  }
+  .header .navi i:hover{
+      transform: none; /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+  .info{
+    margin-left:0;
+    width:100%;
+    height:25%;
+    margin-top:7%;
+    display:flex;
+  }
+  .image img{
+    border-radius: 50%;
+    margin-left:10px;
+    width:100px;
+    height:100;
+  }
+  .info .name{
+    font-size: 16px;
+    font-weight:800;
+    font-family:cursive;
+    margin-top:10px;
+  }
+  
+  .info .postfriends{
+    font-size: 12px;
+    font-weight: 100;
+    width:35%;
+    margin:10px;
+    font-family: 'Open Sans', sans-serif;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .postfriends .generalInfo{
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+  }
+  .updatePhoto{
+    margin-top:15px;
+    margin-left:10px;
+    width:90%;
+    height:25px;
+    border-radius:5px;
+    color:white;
+    font-weight:600;
+    background:#00308F;
+    border: none;
+  }
+  .gallery{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin:5px;
+    width:100%;
+  }
+  .gallery .item{
+    width:80%;
+    margin:10px;
+    box-shadow: -1px 2px 14px -1px rgba(0,0,0,0.75);
+    transition: transform;
+  }
+  
+  .gallery .item:hover {
+    transform: none;
+  }
+  /* .postfriends .addFriend{
+    margin:0px 20px;
+  } */
+  /* 
+  
+  
+  
+  .addFriend  .add-btn{
+    color:white;
+    border:none;
+    background:#00308F ;
+    width:120px;
+    height:30px;
+    border-radius: 10px;
+  }
+  
+  .addFriend .sent{
+    color:white;
+    border:none;
+    background:#007FFF ;
+    width:120px;
+    height:30px;
+    border-radius: 10px;
+  }
+  
+  .addFriend .accepted{
+    color:white;
+    border:none;
+    background:#008E97 ;
+    width:120px;
+    height:30px;
+    border-radius: 10px;
+  }
+  
+  
+  .fa-user-plus,.fa-check{
+    margin:8px 12px 8px;
+  }
+  
+  
+  .generalInfo a{
+    text-decoration: none;
+    color:black;
+  } */
+}

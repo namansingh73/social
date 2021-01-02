@@ -1,0 +1,42 @@
+head
+  title Users
+  link(rel='stylesheet' href='/templates/searchUsers.css')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN' crossorigin='anonymous')
+  link(href='https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Josefin+Sans:wght@200&family=Lexend+Deca&family=Livvic:wght@100&display=swap&family=Kanit:wght@500&display=swap' rel='stylesheet')
+  link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
+  link(rel='icon' href='/templates/logo.png' type='image/gif')
+  meta(name='viewport' content='width=device-width,initial-scale=1')
+
+header
+  .header
+    .name Quantumdeck
+    form.search
+      input.searchTerm(type='text' placeholder='search user')
+      button.searchButton(type='submit')
+        i.fa.fa-search
+    .navi
+      a(href='/profile' title='Profile')
+        i.fa.fa-user-circle-o(aria-hidden='true')
+      a(href='/addpost' title='Add Post')
+        i.fa.fa-plus-circle(aria-hidden='true')
+      a.logout(href='#' title='Logout')
+        i.fa.fa-sign-out(aria-hidden='true')
+.content
+  if eligibleUsers.length>0
+    for user in eligibleUsers
+      .card
+        .leftContent
+          .image
+            img(src=`${user.profilePhoto}` width='70' height='70')
+        .rightContent
+          .name
+            a(href=`/profile/${user._id}`)
+              | #{user.name}
+  else
+    .card
+      .empty
+        | No users to show
+script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js')
+script(src='/js/logout.js')
+script(src='/js/findUsers.js')

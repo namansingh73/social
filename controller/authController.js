@@ -228,11 +228,9 @@ exports.forgotPassword = async(req,res,next)=>{
 
 exports.resetPassword = async(req,res,next)=>{
         //1)Get User Based on token
-        console.log(req.params.token);
         const hashedToken = crypto.createHash('sha256').update(req.params.token).digest('hex');
         const user = await User.findOne({passwordResetToken:hashedToken,passwordResetExpires:{$gt:
         Date.now()}});
-        console.log(hashedToken);
         //2) If token has not expired, set the password for the user
           if(!user)
           {
@@ -242,7 +240,6 @@ exports.resetPassword = async(req,res,next)=>{
             });
             return next();
           }
-          console.log(user);
           user.password = req.body.password;
           user.passwordConfirm = req.body.passwordConfirm;
           user.passwordResetToken = undefined;

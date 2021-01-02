@@ -10,6 +10,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const postRouter = require('./routers/postroute');
 const cors = require('cors');
+const compression = require('compression');
 
 app.use(
     helmet.contentSecurityPolicy({
@@ -34,6 +35,7 @@ const limit = rateLimit({
 app.use(mongoSanitize());
 app.use(express.json({limit:'100kb'}));
 app.use(cors());
+app.use(compression());
 //Data sanitization against XSS
 app.use(xss());
 

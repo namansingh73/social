@@ -22,7 +22,6 @@ exports.getAllUsers = async (req,res,next)=>{
 exports.createUser = async (req,res,next)=>{
     try{
     const newUser = await User.create(req.body);
-    console.log(newUser);
     res.status(201).json({
         status:'success',
         data:{
@@ -31,7 +30,6 @@ exports.createUser = async (req,res,next)=>{
     });
     }catch(err)
     {
-        console.log(err);
         res.status(400).json({
             status:'fail',
             message:err

@@ -4,7 +4,8 @@
   "description": "learning node.js",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
     "social": "npm start --prefix social",
     "socialinstall": "npm install --prefix social"
   },
@@ -34,6 +35,6 @@
     "nodemon": "^2.0.4"
   },
   "engines": {
-    "node": "^12"
+    "node": ">=10.0.0"
   }
 }
